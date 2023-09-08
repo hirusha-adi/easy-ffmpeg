@@ -2,9 +2,10 @@ import argparse
 import os
 import subprocess
 import sys
+from typing import List, Optional
 
 
-def generate_output_filename(input_filename, output_filename):
+def generate_output_filename(input_filename: str, output_filename: Optional[str]) -> str:
     if output_filename:
         return output_filename
     else:
@@ -12,12 +13,12 @@ def generate_output_filename(input_filename, output_filename):
         return f"{base_name}-out{extension}"
 
 
-def calculate_bufsize(bitrate):
+def calculate_bufsize(bitrate: int) -> str:
     bufsize = int(bitrate) * 2
     return f"{bufsize}k"
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="Do stuff with ffmpeg using using the GPU (Nvidia)")
     parser.add_argument("-i", "--input", required=True, help="Input file path")
     parser.add_argument("-o", "--output", help="Output file path")
@@ -37,7 +38,7 @@ def main():
 
     args = parser.parse_args()
 
-    cmd = ["ffmpeg", "-hwaccel_device", "0", "-hwaccel", "cuda", "-i", args.input]
+    cmd: List[str] = ["ffmpeg", "-hwaccel_device", "0", "-hwaccel", "cuda", "-i", args.input]
 
     if args.resolution:
         resolutions = {
