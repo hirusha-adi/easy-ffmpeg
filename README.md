@@ -37,7 +37,7 @@ If you prefer a hassle-free experience and want to run Easy-FFmpeg as a standalo
 
 #### Installation
 
-1. Download the pre-compiled .exe file from the [Releases](https://github.com/your-repo/easy-ffmpeg/releases) section of this repository.
+1. Download the pre-compiled .exe file from the [Releases](https://github.com/hirusha-adi/easy-ffmpeg/releases) section of this repository.
 
 2. Place the downloaded .exe file in a directory that's part of your system's PATH, such as the `System32` folder, or add the directory containing the .exe file to your system's PATH environment variable.
 
