@@ -19,7 +19,7 @@ def calculate_bufsize(bitrate: int) -> str:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Do stuff with ffmpeg using using the GPU (Nvidia)")
+    parser = argparse.ArgumentParser(description="Do stuff with ffmpeg using the GPU (Nvidia)")
     parser.add_argument("-i", "--input", required=True, help="Input file path")
     parser.add_argument("-o", "--output", help="Output file path")
     parser.add_argument("-r", "--resolution", choices=["240p", "360p", "480p", "540p", "720p", "1080p", "1440p", "4K"], help="Output resolution")
