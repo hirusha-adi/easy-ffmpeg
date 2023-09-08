@@ -59,7 +59,8 @@ def main() -> None:
     if args.audio_bitrate:
         cmd.extend(["-c:a", "aac", "-b:a", f"{args.audio_bitrate}k"])
 
-    cmd.extend(args.other)  # other opts after --other *
+    if not (args.other is None):
+        cmd.extend(args.other)  # other opts after --other *
 
     output_filename = generate_output_filename(args.input, args.output)
     cmd.extend(["-c:v", "h264_nvenc", "-preset", "slow", "-c:a", "copy", output_filename])
