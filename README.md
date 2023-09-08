@@ -77,11 +77,9 @@ Easy-FFmpeg simplifies multimedia tasks with straightforward commands. Below are
   easy-ffmpeg -i input.mkv -o output.mp4 --other -vf "rotate=90"
   ```
 
-For more information and usage details, refer to the [User Guide](user-guide.md).
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/hirusha-adi/easy-ffmpeg/blob/main/LICENSE) file for details.
 
 ---
 
