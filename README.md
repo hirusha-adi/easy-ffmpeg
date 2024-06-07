@@ -1,6 +1,11 @@
 ## Getting Started
 
 Easy-FFmpeg provides two ways to get started based on your preference: using the Python script or the pre-compiled .exe file.
+Based on the command below:
+
+```bash
+ffmpeg -hwaccel_device 0 -hwaccel cuda -i "input.mkv" -c:v h264_nvenc -preset slow "output.mp4"
+```
 
 ### Option 1: The Python Way
 
